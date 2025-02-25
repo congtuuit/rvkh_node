@@ -32,14 +32,6 @@ app.get("/app/image-optimizer/health", (req, res) => {
   res.status(200).send(response);
 });
 
-//APP APIs
-app.get("/app/v1/ping", (req, res) => {
-  const message = "Server running!";
-  const version = "NodeJS " + process.versions.node;
-  const response = [message, version].join("\n");
-
-  res.status(200).send(response);
-});
 
 
 // Khởi tạo server HTTP và lắng nghe

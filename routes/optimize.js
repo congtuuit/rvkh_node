@@ -25,4 +25,14 @@ router.post("/optimize", async (req, res) => {
   }
 });
 
+//APP APIs
+app.get("/v1/ping", (req, res) => {
+  const message = "Server running!";
+  const version = "NodeJS " + process.versions.node;
+  const response = [message, version].join("\n");
+
+  res.status(200).send(response);
+});
+
+
 module.exports = router;
